@@ -22,6 +22,7 @@
     <!-- Inherit the core Web Toolkit stuff.                        -->
     <inherits name='com.google.gwt.user.User'/>
     <inherits name='org.gwtbootstrap3.GwtBootstrap3'/>
+    <inherits name='org.gwtbootstrap3.extras.select.Select'/>
 
     <!-- Specify the app entry point class.                         -->
     <entry-point class='org.gwtbootstrap3.seed.client.SeedWebApp'/>

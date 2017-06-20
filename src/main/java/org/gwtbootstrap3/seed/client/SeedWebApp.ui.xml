@@ -17,12 +17,43 @@
   limitations under the License.
   #L%
   -->
-<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:b='urn:import:org.gwtbootstrap3.client.ui'
-    xmlns:b.html='urn:import:org.gwtbootstrap3.client.ui.html'>
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' 
+             xmlns:b='urn:import:org.gwtbootstrap3.client.ui'
+             xmlns:select='urn:import:org.gwtbootstrap3.extras.select.client.ui'
+             xmlns:b.html='urn:import:org.gwtbootstrap3.client.ui.html'>
+    
+    <ui:style>
+        .mySelect img {
+            margin-right: 10px;
+            height: 32px;
+            width: 32px;
+        }
+        .dropdown-menu>li>a {
+            padding: 3px 12px;
+        }
+
+        .mySelect span {
+            color: #000;
+        }
+    </ui:style>
     <b.html:Div>
         <b:Well>
-            <b:Heading size="H1" text="Seed Web App" />
+            <b:Heading size="H1" text="Seed Web App"/>
             <b.html:Paragraph>Just fork this repo and get started!!</b.html:Paragraph>
+            <b:Heading size="H1" text="Select Demo"/>
+            <select:Select width="140" addStyleNames="{style.mySelect}">
+                <select:Option text="English" value="en" 
+                               content="&lt;img src='http://steamspy.com/assets/img/flags/32/GB.png'/&gt;&lt;span&gt;English&lt;/span&gt;"/>
+                <select:Option text="Dansk" value="dk"
+                               content="&lt;img src='http://steamspy.com/assets/img/flags/32/DK.png'/&gt;&lt;span&gt;Dansk&lt;/span&gt;"/>
+                <select:Option text="Deutcth" value="de"
+                               content="&lt;img src='http://steamspy.com/assets/img/flags/32/DE.png'/&gt;&lt;span&gt;Deutstch&lt;/span&gt;"/>
+                <select:Option text="Norsk" value="no"
+                               content="&lt;img src='http://steamspy.com/assets/img/flags/32/NO.png'/&gt;&lt;span&gt;Norsk&lt;/span&gt;"/>
+                <select:Option text="Føroyskt" value="fy"
+                               content="&lt;img src='http://steamspy.com/assets/img/flags/32/FO.png'/&gt;&lt;span&gt;Føroyskt&lt;/span&gt;"/>
+            </select:Select>
         </b:Well>
+
     </b.html:Div>
 </ui:UiBinder>
